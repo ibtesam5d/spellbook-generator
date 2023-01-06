@@ -7,6 +7,12 @@ personal project to create an online dungeons and dragons spellbook generator th
 - basic pages (home, spellbook, create spellbook, edit spellbook(?))
 - determine user flow
 - configure database to store user data
-- learn user auth to allow users to create an account(?) OR
-- find a way to save data to the browser
 - host under a domain
+- learn user auth to allow users to create an account(?) OR
+- find a way to save data to the browsers
+
+## potential tech stack
+
+authentication: sveltekitauth.js
+orm: prisma
+api: svelte-trpc
