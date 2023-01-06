@@ -13,6 +13,6 @@ personal project to create an online dungeons and dragons spellbook generator th
 
 ## potential tech stack
 
-authentication: sveltekitauth.js
-orm: prisma
-api: svelte-trpc
+- authentication: sveltekitauth.js
+- orm: prisma
+- api: svelte-trpc
