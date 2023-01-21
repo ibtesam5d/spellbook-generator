@@ -1,16 +1,8 @@
-import type { RequestHandler } from '@sveltejs/kit'
-import { PrismaClient } from '@prisma/client'
+import type { Spell } from '@prisma/client';
+import type { PageServerLoad } from './$types';
 
-const prisma = new PrismaClient();
+export const load: PageServerLoad = async ({ fetch }) => {
+	const resp = await fetch('/api/spells');
 
-export type Spell = {
-    id: number;
-    level: number;
-    name: string;
-    list: string[];
-}
-
-// TODO: FIgure out where to put this and how to write it
-export async function getAllSpells = (async () => {
-    const allSpells = await prisma.spell.findMany()
-})
+	return { spells: (await resp.json()) as Spell[] };
+};

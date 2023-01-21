@@ -16,6 +16,6 @@
 </svelte:head>
 
 <Header />
-<main class="container flex flex-auto justify-center items-center">
+<main class="flex flex-col flex-auto justify-center items-center">
 	<slot />
 </main>

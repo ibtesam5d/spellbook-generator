@@ -4,7 +4,7 @@
 	<a href="/">D&D Spellbook Generator</a>
 	<nav class="">
 		<ul>
-			<a href="/">Home</a>
+			<a href="/spells">Spells</a>
 		</ul>
 	</nav>
 </header>
