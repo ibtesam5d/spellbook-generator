@@ -7,12 +7,25 @@ personal project to create an online dungeons and dragons spellbook generator th
 - basic pages (home, spellbook, create spellbook, edit spellbook(?))
 - determine user flow
 - configure database to store user data
+- set up the data models
 - host under a domain
 - learn user auth to allow users to create an account(?) OR
 - find a way to save data to the browsers
+
+## user stories
+
+- As a user, I can create a spellbook
+- As a user, I can see a list of spells
+- As a user, I can add a spell to my spellbook
+- As a user, I can sort spells by their class (list)
+- As a user, I can remove spells from my spellbook
+- As a user, I can edit the details of my spellbook like the title
+- As a user, I can click on a spell and view its details
 
 ## potential tech stack
 
 - authentication: sveltekitauth.js
 - orm: prisma
 - api: svelte-trpc
+- database: postgres
+- hosting: vercel
