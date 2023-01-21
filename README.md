@@ -4,13 +4,11 @@ personal project to create an online dungeons and dragons spellbook generator th
 
 ## todos
 
-- basic pages (home, spellbook, create spellbook, edit spellbook(?))
-- determine user flow
-- configure database to store user data
-- set up the data models
+- re-adjust spell model to include more information
+- allow users to create a spellbook
+- begin manual data entry process!
 - host under a domain
-- learn user auth to allow users to create an account(?) OR
-- find a way to save data to the browsers
+- learn user auth to allow users to create an account(?)
 
 ## user stories
 
