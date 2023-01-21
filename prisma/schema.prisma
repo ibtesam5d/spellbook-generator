@@ -8,8 +8,16 @@ datasource db {
 }
 
 model Spell {
-  id    Int      @id @default(autoincrement())
-  level Int
-  name  String
-  list  String[]
+  id             Int      @id @default(autoincrement())
+  name           String   @default("")
+  level          Int      @default(0)
+  source         String   @default("")
+  list           String[] @default([""])
+  school         String   @default("")
+  time           String   @default("")
+  range          String   @default("")
+  duration       String   @default("")
+  components     String[] @default([""])
+  description    String   @default("")
+  subdescription String   @default("")
 }
