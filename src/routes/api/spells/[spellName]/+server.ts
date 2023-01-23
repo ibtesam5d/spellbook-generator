@@ -4,10 +4,13 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '../$types';
 
 export const GET: RequestHandler = async ({ url }) => {
-	const spellName = url.pathname;
+	const spellName = url.pathname.split('/').pop()?.replace('-', ' ');
 	const spell = await prisma.spell.findFirst({
 		where: {
-			name: 'AcidSplash'
+			name: {
+				equals: spellName,
+				mode: 'insensitive'
+			}
 		}
 	});
 

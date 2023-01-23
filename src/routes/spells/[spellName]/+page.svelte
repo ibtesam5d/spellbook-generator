@@ -5,8 +5,8 @@
 	export let data: PageData;
 
 	onMount(() => {
-		console.log(data);
+		console.log(data.spell.name);
 	});
 </script>
 
-<div>{data}</div>
+<div>{data.spell.name}</div>
