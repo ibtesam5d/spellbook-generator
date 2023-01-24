@@ -32,8 +32,7 @@ current: allow users to create a spellbook
 
 ## potential tech stack
 
-- authentication: sveltekitauth.js
+- authentication: sveltekitauth.js (?)
 - orm: prisma
-- api: svelte-trpc
-- database: postgres
-- hosting: vercel
+- database: postgres (to find hosting options (fly.io?))
+- hosting: vercel (to look into alternatives potentially)
