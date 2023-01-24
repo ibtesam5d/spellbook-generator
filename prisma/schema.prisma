@@ -7,17 +7,43 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id         Int         @id @default(autoincrement())
+  email      String      @unique
+  username   String      @unique
+  password   String
+  name       String?
+  role       Role        @default(USER)
+  spellbooks Spellbook[]
+}
+
 model Spell {
-  id             Int      @id @default(autoincrement())
-  name           String   @default("")
-  level          Int      @default(0)
-  source         String   @default("")
-  list           String[] @default([""])
-  school         String   @default("")
-  time           String   @default("")
-  range          String   @default("")
-  duration       String   @default("")
-  components     String[] @default([""])
-  description    String   @default("")
-  subdescription String   @default("")
+  id             Int         @id @default(autoincrement())
+  name           String
+  level          Int
+  source         String
+  list           String[]
+  school         String
+  time           String
+  range          String
+  duration       String
+  components     String[]
+  description    String
+  subdescription String
+  spellbooks     Spellbook[]
+}
+
+model Spellbook {
+  id        Int      @id @default(autoincrement())
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  spells    Spell[]
+}
+
+enum Role {
+  USER
+  ADMIN
 }
