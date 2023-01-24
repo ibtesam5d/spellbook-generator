@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '../lib/components/Header.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
 	import '../app.css';
 </script>
 
@@ -15,7 +15,7 @@
 	/>
 </svelte:head>
 
-<Header />
-<main class="flex flex-col flex-auto justify-center items-center">
+<Navbar />
+<main class="flex flex-col flex-auto items-center p-6">
 	<slot />
 </main>
