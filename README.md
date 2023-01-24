@@ -4,11 +4,21 @@ personal project to create an online dungeons and dragons spellbook generator th
 
 ## todos
 
-- re-adjust spell model to include more information
-- allow users to create a spellbook
+current: allow users to create a spellbook
+
+- expand spell page to show spell details
+- add icons to side navigation bar
+- add interaction to side navigation bar
+- allow users to add/remove spells to/from their spellbook
+- allow users to edit their spellbook's details
+- add a home page
 - begin manual data entry process!
 - host under a domain
 - learn user auth to allow users to create an account(?)
+
+## completed todos
+
+- re-adjust spell model to include more information
 
 ## user stories
 
