@@ -30,6 +30,11 @@ current: allow users to create a spellbook
 - As a user, I can edit the details of my spellbook like the title
 - As a user, I can click on a spell and view its details
 
+## future ideas
+
+- spellSHEET! function similar to gsheet
+- notes section for a spellbook/character
+
 ## potential tech stack
 
 - authentication: sveltekitauth.js (?)

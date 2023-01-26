@@ -34,13 +34,16 @@ model Spell {
 }
 
 model Spellbook {
-  id        Int      @id @default(autoincrement())
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
-  name      String   @unique
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  spells    Spell[]
+  id            Int      @id @default(autoincrement())
+  author        User     @relation(fields: [authorId], references: [id])
+  authorId      Int
+  name          String   @unique
+  characterName String
+  description   String
+  class         String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  spells        Spell[]
 }
 
 enum Role {
