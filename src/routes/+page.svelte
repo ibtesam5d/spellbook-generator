@@ -5,7 +5,7 @@
 			<a href="/spellbooks/create" class="text-2xl">Create a Spellbook</a>
 		</div>
 		<div class="flex flex-col">
-			<a href="/" class="text-2xl">Your Spellbooks (coming soon)</a>
+			<a href="/spellbooks" class="text-2xl">Your Spellbooks</a>
 		</div>
 	</div>
 </section>
