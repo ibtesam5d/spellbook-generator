@@ -1,8 +1,10 @@
 ## dnd spellbook generator
 
-personal project to create an online dungeons and dragons spellbook generator that allows users to create a custom spellbook that can be saved or downloaded to a pdf
+this is a personal project to create an online dungeons and dragons spellbook generator. this spellbook generator will allow users to create a custom spellbook that can be saved or downloaded to a pdf. this spellbook will contain a list of all the users spells, along with the details about each of those spells.
 
-## todos
+## todos/user stories
+
+### uncompleted todos
 
 current: expand spell page to show spell details
 
@@ -17,12 +19,12 @@ current: expand spell page to show spell details
 - host under a domain
 - learn user auth to allow users to create an account(?)
 
-## completed todos
+### completed todos
 
 - re-adjust spell model to include more information
 - allow users to create a spellbook
 
-## user stories
+### user stories
 
 - As a user, I can create a spellbook
 - As a user, I can see a list of spells
@@ -33,6 +35,10 @@ current: expand spell page to show spell details
 - As a user, I can click on a spell and view its details
 
 ## future ideas
+
+### spellbook enhancements
+
+### app progression
 
 - spellSHEET! function similar to gsheet
 - notes section for a spellbook/character
