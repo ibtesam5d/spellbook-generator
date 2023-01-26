@@ -4,11 +4,11 @@
 	export let data: PageData;
 </script>
 
-<div class="flex flex-col">
+<section class="flex flex-col">
 	<h1 class="text-5xl py-8">Spells</h1>
 	<div class="flex flex-col text-center">
 		{#each data.spells as spell}
 			<a href="/spells/{spell.name.replace(' ', '-').toLowerCase()}">{spell.name}</a>
 		{/each}
 	</div>
-</div>
+</section>
