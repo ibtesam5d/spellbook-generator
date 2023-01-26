@@ -29,18 +29,18 @@ model Spell {
   duration       String
   components     String[]
   description    String
-  subdescription String
+  subdescription String?
   spellbooks     Spellbook[]
 }
 
 model Spellbook {
   id            Int      @id @default(autoincrement())
-  author        User     @relation(fields: [authorId], references: [id])
-  authorId      Int
+  User          User?    @relation(fields: [userId], references: [id])
+  userId        Int?
   name          String   @unique
   characterName String
-  description   String
-  class         String
+  description   String?
+  class         String[]
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
   spells        Spell[]
