@@ -6,9 +6,8 @@ this is a personal project to create an online dungeons and dragons spellbook ge
 
 ### uncompleted todos
 
-current: expand spell page to show spell details
+current: add icons to side navigation bar
 
-- add icons to side navigation bar
 - add interaction to side navigation bar
 - allow users to add/remove spells to/from their spellbook
 - allow users to edit their spellbook's details
@@ -23,6 +22,7 @@ current: expand spell page to show spell details
 
 - re-adjust spell model to include more information
 - allow users to create a spellbook
+- expand spell page to show spell details
 
 ### user stories
 

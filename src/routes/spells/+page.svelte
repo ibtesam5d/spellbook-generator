@@ -4,7 +4,7 @@
 	export let data: PageData;
 </script>
 
-<section class="flex flex-col">
+<section class="flex flex-col flex-auto w-full">
 	<h1 class="text-5xl py-8">Spells</h1>
 	<div class="flex flex-col text-center">
 		{#each data.spells as spell}

@@ -5,7 +5,7 @@
 	console.log(data);
 </script>
 
-<section class="flex flex-col">
+<section class="flex flex-col flex-auto w-full">
 	<h1 class="text-5xl py-8">
 		{data.spellbook.name}
 	</h1>
