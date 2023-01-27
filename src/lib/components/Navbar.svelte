@@ -16,19 +16,10 @@
 	<div class="w-16 h-16 flex items-center justify-center bg-slate-500 rounded-full">
 		<a href="/"><i class="mi mi-home" /></a>
 	</div>
-	<div
-		class="w-16 flex flex-col bg-slate-500 rounded-full {isDropdownOpen
-			? dropdownOpenClass
-			: dropdownClosedClass}"
-	>
-		<div on:click={handleDropdownClick} on:keydown={handleDropdownClick} class="flex flex-col">
-			<i class="mi mi-chevron-double-down {isDropdownOpen ? iconOpenClass : ''}" />
-		</div>
-		{#if isDropdownOpen}
-			<a href="/spellbooks"><i class="mi mi-book" /></a>
-			<a href="/spells" class={iconOpenClass}><i class="mi mi-wind" /></a>
-		{/if}
-	</div>
+	<ul class="w-16 flex flex-col bg-slate-500 rounded-full">
+		<a href="/spellbooks" class={iconOpenClass}><i class="mi mi-book" /></a>
+		<a href="/spells" class={iconOpenClass}><i class="mi mi-wind" /></a>
+	</ul>
 	<ul class="w-16 mt-auto flex flex-col gap-4 bg-slate-500 rounded-full">
 		<a href="/" class={iconOpenClass}><i class="mi mi-settings" /></a>
 		<a href="/"><i class="mi mi-user" /></a>
