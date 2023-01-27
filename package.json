@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@prisma/client": "^4.9.0"
+		"@prisma/client": "^4.9.0",
+		"sass": "^1.57.1"
 	}
 }
