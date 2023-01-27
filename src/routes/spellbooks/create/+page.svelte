@@ -10,7 +10,7 @@
 	<form
 		method="POST"
 		action="?/create"
-		class="flex flex-col gap-8 mb-4"
+		class="flex flex-col flex-1 gap-8 mb-4"
 		use:enhance={() => {
 			return async ({ result, update }) => {
 				if (result.type === 'failure') {
@@ -50,7 +50,7 @@
 
 		<fieldset class="flex justify-center gap-8">
 			<legend>Select a class</legend>
-			<ul>
+			<ul class="flex flex-col items-end">
 				<li>
 					<label for="class1">Artificer</label>
 					<input type="checkbox" id="class1" name="class" value="artificer" />
@@ -64,7 +64,7 @@
 					<input type="checkbox" id="class3" name="class" value="cleric" />
 				</li>
 			</ul>
-			<ul>
+			<ul class="flex flex-col items-end">
 				<li>
 					<label for="class4">Druid</label>
 					<input type="checkbox" id="class4" name="class" value="druid" />
@@ -78,7 +78,7 @@
 					<input type="checkbox" id="class6" name="class" value="ranger" />
 				</li>
 			</ul>
-			<ul>
+			<ul class="flex flex-col items-end">
 				<li>
 					<label for="class7">Sorcerer</label>
 					<input type="checkbox" id="class7" name="class" value="sorcerer" />
@@ -94,11 +94,11 @@
 			</ul>
 		</fieldset>
 
-		<section>
+		<div class="mt-auto">
 			<p>
 				<button type="submit" class="bg-slate-500 p-3 rounded-lg">Create a Spellbook</button>
 			</p>
-		</section>
+		</div>
 	</form>
 	{#if form?.error}
 		<span>{form?.message}</span>
