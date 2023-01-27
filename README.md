@@ -6,13 +6,13 @@ this is a personal project to create an online dungeons and dragons spellbook ge
 
 ### uncompleted todos
 
-current: add icons to side navigation bar
+current: add interaction to side navigation bar
 
-- add interaction to side navigation bar
 - allow users to add/remove spells to/from their spellbook
 - allow users to edit their spellbook's details
 - allow users to add a custom image for their spellbook
 - allow users to assign a color to their spellbooks
+- allow users to export their spellbook as a PDF
 - add a home page
 - begin manual data entry process!
 - host under a domain
@@ -23,6 +23,8 @@ current: add icons to side navigation bar
 - re-adjust spell model to include more information
 - allow users to create a spellbook
 - expand spell page to show spell details
+- add icons to side navigation bar
+- try new navbar (check figma)
 
 ### user stories
 
@@ -33,12 +35,9 @@ current: add icons to side navigation bar
 - As a user, I can remove spells from my spellbook
 - As a user, I can edit the details of my spellbook like the title
 - As a user, I can click on a spell and view its details
+- As a user, I can export my character's spellbook as a PDF
 
-## future ideas
-
-### spellbook enhancements
-
-### app progression
+## future ideas/enhancements
 
 - spellSHEET! function similar to gsheet
 - notes section for a spellbook/character
