@@ -1,37 +1,48 @@
-<script lang="ts">
-	$: isDropdownClicked = false;
-	$: isDropdownHovered = false;
-	$: isDropdownOpen = isDropdownClicked || isDropdownHovered;
-
-	let dropdownClosedClass = 'h-16 items-center justify-center';
-	let dropdownOpenClass = 'gap-4';
-	let iconOpenClass = 'flex h-16 items-center justify-center';
-
-	const handleDropdownClick = () => {
-		isDropdownClicked = !isDropdownClicked;
-	};
-</script>
-
-<nav class="w-16 m-10 flex flex-col items-center gap-4">
-	<div class="w-16 h-16 flex items-center justify-center bg-slate-500 rounded-full">
+<nav class="nav">
+	<ul class="nav-bubble">
 		<a href="/"><i class="mi mi-home" /></a>
-	</div>
-	<ul class="w-16 flex flex-col bg-slate-500 rounded-full">
-		<a href="/spellbooks" class={iconOpenClass}><i class="mi mi-book" /></a>
-		<a href="/spells" class={iconOpenClass}><i class="mi mi-wind" /></a>
 	</ul>
-	<ul class="w-16 mt-auto flex flex-col gap-4 bg-slate-500 rounded-full">
-		<a href="/" class={iconOpenClass}><i class="mi mi-settings" /></a>
+	<ul class=" nav-bubble">
+		<a href="/spellbooks"><i class="mi mi-book" /></a>
+		<a href="/spells"><i class="mi mi-wind" /></a>
+	</ul>
+	<ul class="nav-bubble">
+		<a href="/"><i class="mi mi-settings" /></a>
 		<a href="/"><i class="mi mi-user" /></a>
-		<a href="/" class={iconOpenClass}><i class="mi mi-log-in" /></a>
+		<a href="/"><i class="mi mi-log-in" /></a>
 	</ul>
 </nav>
 
 <style lang="scss">
-	.rotate-chevron {
-		transition: transform 0.5s;
-		&:click {
-			transform: rotateX(180deg);
+	.nav {
+		width: 4rem;
+		margin: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.nav-bubble {
+		width: 4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		@apply bg-slate-500;
+
+		&:last-of-type {
+			margin-top: auto;
 		}
+	}
+
+	.nav-bubble a {
+		height: 4rem;
+		width: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
 	}
 </style>
