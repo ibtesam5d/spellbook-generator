@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import SpellTable from '$lib/components/SpellTable.svelte';
+	import SpellTable from '$lib/components/SpellTable/SpellTable.svelte';
 
 	export let data: PageData;
 </script>

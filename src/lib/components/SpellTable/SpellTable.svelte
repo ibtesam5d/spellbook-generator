@@ -1,15 +1,26 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
-	import { createSvelteTable, flexRender, getCoreRowModel } from '@tanstack/svelte-table';
+	import {
+		createSvelteTable,
+		flexRender,
+		getCoreRowModel,
+		renderComponent
+	} from '@tanstack/svelte-table';
 	import type { ColumnDef, TableOptions } from '@tanstack/svelte-table';
 	import type { Spell } from '@prisma/client';
+	import SpellTableLink from './SpellTableLink.svelte';
 
 	export let data: Spell[] = [];
 
 	const defaultColumns: ColumnDef<Spell>[] = [
 		{
 			accessorKey: 'name',
-			header: () => 'Name'
+			header: () => 'Name',
+			cell: (data) =>
+				renderComponent(SpellTableLink, {
+					href: `/spells/${(data.cell.getValue() as string).toLowerCase().replaceAll(' ', '-')}`,
+					label: data.cell.getValue() as string
+				})
 		},
 		{
 			accessorKey: 'level',

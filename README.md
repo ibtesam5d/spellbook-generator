@@ -6,7 +6,7 @@ this is a personal project to create an online dungeons and dragons spellbook ge
 
 ### uncompleted todos
 
-current: build spell table!
+current: add spellbook page (mimic spell page ?)
 
 - allow users to add/remove spells to/from their spellbook
 - allow users to edit their spellbook's details
@@ -29,6 +29,7 @@ current: build spell table!
 - expand spell page to show spell details
 - add icons to side navigation bar
 - try new navbar (check figma)
+- build spell table!
 
 ### user stories
 
