@@ -64,7 +64,7 @@
 	<table class="spell-table">
 		<thead>
 			{#each $table.getHeaderGroups() as headerGroup}
-				<tr>
+				<tr class="bg-slate-600/75">
 					{#each headerGroup.headers as header}
 						<th class="spell-table__cell">
 							{#if !header.isPlaceholder}
@@ -94,9 +94,7 @@
 <style lang="scss">
 	.spell-table {
 		width: 100%;
-		border: 3px solid white;
 		border-collapse: separate !important;
-		border-radius: 5px;
 		padding: 0.5rem;
 
 		&__cell {
