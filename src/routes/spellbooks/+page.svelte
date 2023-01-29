@@ -6,7 +6,7 @@
 </script>
 
 <section class="flex flex-col flex-auto">
-	<h1 class="text-5xl py-8">Spellbooks</h1>
+	<h1 class="text-6xl py-8">Spellbooks</h1>
 	<div class="grid grid-cols-3 gap-8">
 		{#each data.spellbooks as spellbook}
 			<SpellbookCard

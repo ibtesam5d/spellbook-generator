@@ -7,7 +7,7 @@
 
 <section class="flex flex-col flex-auto gap-8 max-w-prose">
 	<div class="flex flex-col gap-4 p-4 bg-slate-600/70 rounded-xl">
-		<h1 class="text-5xl">
+		<h1 class="text-6xl">
 			{data.spell.name}
 		</h1>
 		<h3 class="text-xl">
