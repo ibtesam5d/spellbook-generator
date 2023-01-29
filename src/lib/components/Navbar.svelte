@@ -15,7 +15,9 @@
 
 <style lang="scss">
 	.nav {
+		position: fixed;
 		width: 4rem;
+		height: calc(100vh - 80px);
 		margin: 2.5rem;
 		display: flex;
 		flex-direction: column;
