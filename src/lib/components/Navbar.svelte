@@ -1,15 +1,15 @@
 <nav class="nav">
 	<ul class="nav-bubble">
-		<a href="/"><i class="mi mi-home" /></a>
+		<a href="/"><i class="mi-lg mi-home" /></a>
 	</ul>
 	<ul class=" nav-bubble">
-		<a href="/spellbooks"><i class="mi mi-book" /></a>
-		<a href="/spells"><i class="mi mi-wind" /></a>
+		<a href="/spellbooks"><i class="mi-lg mi-book" /></a>
+		<a href="/spells"><i class="mi-lg mi-wind" /></a>
 	</ul>
 	<ul class="nav-bubble">
-		<a href="/"><i class="mi mi-settings" /></a>
-		<a href="/"><i class="mi mi-user" /></a>
-		<a href="/"><i class="mi mi-log-in" /></a>
+		<a href="/"><i class="mi-lg mi-settings" /></a>
+		<a href="/"><i class="mi-lg mi-user" /></a>
+		<a href="/"><i class="mi-lg mi-log-in" /></a>
 	</ul>
 </nav>
 
