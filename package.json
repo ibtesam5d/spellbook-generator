@@ -34,6 +34,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "^4.9.0",
+		"@tanstack/svelte-table": "^8.7.8",
 		"sass": "^1.57.1"
 	}
 }

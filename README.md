@@ -12,8 +12,10 @@ current: build spell table!
 - allow users to edit their spellbook's details
 - allow users to add a custom image for their spellbook
 - allow users to assign a color to their spellbooks
+- seperatre classes with a comma AND a space
 - add interaction to side navigation bar
 - add pagination to the spellbooks page
+- add spell damage to table view
 - allow users to export their spellbook as a PDF
 - add a home page
 - begin manual data entry process!
