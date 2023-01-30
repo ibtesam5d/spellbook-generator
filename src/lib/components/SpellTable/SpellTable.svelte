@@ -60,42 +60,39 @@
 	const table = createSvelteTable(options);
 </script>
 
-<div class="p-2">
-	<table class="spell-table">
-		<thead>
-			{#each $table.getHeaderGroups() as headerGroup}
-				<tr class="bg-slate-600/75">
-					{#each headerGroup.headers as header}
-						<th class="spell-table__cell">
-							{#if !header.isPlaceholder}
-								<svelte:component
-									this={flexRender(header.column.columnDef.header, header.getContext())}
-								/>
-							{/if}
-						</th>
-					{/each}
-				</tr>
-			{/each}
-		</thead>
-		<tbody>
-			{#each $table.getRowModel().rows as row}
-				<tr class="spell-table__row">
-					{#each row.getVisibleCells() as cell}
-						<td class="spell-table__cell">
-							<svelte:component this={flexRender(cell.column.columnDef.cell, cell.getContext())} />
-						</td>
-					{/each}
-				</tr>
-			{/each}
-		</tbody>
-	</table>
-</div>
+<table class="spell-table">
+	<thead>
+		{#each $table.getHeaderGroups() as headerGroup}
+			<tr class="bg-slate-600/75">
+				{#each headerGroup.headers as header}
+					<th class="spell-table__cell">
+						{#if !header.isPlaceholder}
+							<svelte:component
+								this={flexRender(header.column.columnDef.header, header.getContext())}
+							/>
+						{/if}
+					</th>
+				{/each}
+			</tr>
+		{/each}
+	</thead>
+	<tbody>
+		{#each $table.getRowModel().rows as row}
+			<tr class="spell-table__row">
+				{#each row.getVisibleCells() as cell}
+					<td class="spell-table__cell">
+						<svelte:component this={flexRender(cell.column.columnDef.cell, cell.getContext())} />
+					</td>
+				{/each}
+			</tr>
+		{/each}
+	</tbody>
+</table>
 
 <style lang="scss">
 	.spell-table {
 		width: 100%;
 		border-collapse: separate !important;
-		padding: 0.5rem;
 
 		&__cell {
 			padding: 0.5rem;

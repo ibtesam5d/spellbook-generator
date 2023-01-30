@@ -11,6 +11,9 @@ export const GET: RequestHandler = async ({ url }) => {
 				equals: spellbookName,
 				mode: 'insensitive'
 			}
+		},
+		include: {
+			spells: true
 		}
 	});
 

@@ -6,13 +6,13 @@ this is a personal project to create an online dungeons and dragons spellbook ge
 
 ### uncompleted todos
 
-current: add spellbook page (mimic spell page ?)
+current: allow users to add/remove spells to/from their spellbook
 
-- allow users to add/remove spells to/from their spellbook
 - allow users to edit their spellbook's details
 - allow users to add a custom image for their spellbook
 - allow users to assign a color to their spellbooks
 - show spellbook details on hover
+- show spellbook description on hover
 - seperatre classes with a comma AND a space
 - add interaction to side navigation bar
 - add pagination to the spellbooks page
@@ -31,6 +31,7 @@ current: add spellbook page (mimic spell page ?)
 - add icons to side navigation bar
 - try new navbar (check figma)
 - build spell table!
+- add spellbook page (mimic spell page ?)
 
 ### user stories
 
