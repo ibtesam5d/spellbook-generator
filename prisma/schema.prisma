@@ -19,23 +19,22 @@ model User {
 
 model Spell {
   id             Int         @id @default(autoincrement())
-  name           String
   level          Int
-  source         String
+  name           String
   list           String[]
-  school         String
-  time           String
-  range          String
-  duration       String
   components     String[]
   description    String
+  duration       String
+  range          String
+  school         String
+  source         String
   subdescription String?
+  time           String
   spellbooks     Spellbook[]
 }
 
 model Spellbook {
   id            Int      @id @default(autoincrement())
-  User          User?    @relation(fields: [userId], references: [id])
   userId        Int?
   name          String   @unique
   characterName String
@@ -43,6 +42,7 @@ model Spellbook {
   class         String[]
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+  User          User?    @relation(fields: [userId], references: [id])
   spells        Spell[]
 }
 
