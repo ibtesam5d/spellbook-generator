@@ -18,12 +18,20 @@
 			{/if}
 		</h3>
 	</div>
-	<div class="flex flex-col flex-auto gap-8 w-full justify-center">
-		<div class="p-4 bg-slate-600/75 rounded-xl">
-			<h3 class="text-xl"><strong>Casting Time:</strong> {data.spell.time}</h3>
-			<h3 class="text-xl"><strong>Range:</strong> {data.spell.range}</h3>
-			<h3 class="text-xl"><strong>Components:</strong> {data.spell.components}</h3>
-			<h3 class="text-xl"><strong>Duration:</strong> {data.spell.duration}</h3>
+	<div class="flex flex-col flex-auto gap-8 ">
+		<div class="flex justify-evenly p-4 bg-slate-600/75 rounded-xl">
+			<div class="flex flex-col text-center">
+				<h3 class="text-xl">Casting Time:</h3>
+				<h3 class="text-xl">Range:</h3>
+				<h3 class="text-xl">Components:</h3>
+				<h3 class="text-xl">Duration:</h3>
+			</div>
+			<div class="flex flex-col text-cente">
+				<h3 class="text-xl">{data.spell.time}</h3>
+				<h3 class="text-xl">{data.spell.range}</h3>
+				<h3 class="text-xl">{data.spell.components}</h3>
+				<h3 class="text-xl">{data.spell.duration}</h3>
+			</div>
 		</div>
 		<div class="flex flex-col p-4 gap-8 bg-slate-600/75 rounded-xl">
 			<p class="text-lg self-center">{data.spell.description}</p>

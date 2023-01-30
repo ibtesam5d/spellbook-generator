@@ -13,6 +13,7 @@ current: allow users to add/remove spells to/from their spellbook
 - allow users to assign a color to their spellbooks
 - show spellbook details on hover
 - show spellbook description on hover
+- add place to create spellbook from spellbooks page
 - seperatre classes with a comma AND a space
 - add interaction to side navigation bar
 - add pagination to the spellbooks page
@@ -20,6 +21,7 @@ current: allow users to add/remove spells to/from their spellbook
 - allow users to export their spellbook as a PDF
 - add a home page
 - begin manual data entry process!
+- make the table more responsive (i.e., hide rows when screen shrinks)
 - host under a domain
 - learn user auth to allow users to create an account(?)
 
