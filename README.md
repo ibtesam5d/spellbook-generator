@@ -12,6 +12,7 @@ current: add spellbook page (mimic spell page ?)
 - allow users to edit their spellbook's details
 - allow users to add a custom image for their spellbook
 - allow users to assign a color to their spellbooks
+- show spellbook details on hover
 - seperatre classes with a comma AND a space
 - add interaction to side navigation bar
 - add pagination to the spellbooks page

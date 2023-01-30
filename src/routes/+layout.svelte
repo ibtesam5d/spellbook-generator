@@ -16,6 +16,6 @@
 </svelte:head>
 
 <Navbar />
-<main class="flex flex-col flex-auto items-center p-10 ml-36">
+<main class="bg-slate-700 flex flex-col flex-auto items-center p-10 ml-36">
 	<slot />
 </main>
