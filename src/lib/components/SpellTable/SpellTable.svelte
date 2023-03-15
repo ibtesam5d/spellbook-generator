@@ -9,6 +9,7 @@
 	import type { ColumnDef, TableOptions } from '@tanstack/svelte-table';
 	import type { Spell } from '@prisma/client';
 	import SpellTableLink from './SpellTableLink.svelte';
+	import { joinWithSpace } from '$lib/utils/utils';
 
 	export let data: Spell[] = [];
 
@@ -28,7 +29,8 @@
 		},
 		{
 			accessorKey: 'list',
-			header: () => 'Class(es)'
+			header: () => 'Class(es)',
+			cell: (info) => joinWithSpace(info.getValue() as string[])
 		},
 		{
 			accessorKey: 'time',

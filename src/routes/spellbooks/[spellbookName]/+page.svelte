@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SpellTable from '$lib/components/SpellTable/SpellTable.svelte';
+	import { joinWithSlash } from '$lib/utils/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -12,7 +13,7 @@
 			{data.spellbook.name}
 		</h1>
 		<h3 class="text-xl">
-			{data.spellbook.characterName} the {data.spellbook.class}
+			{data.spellbook.characterName} the {joinWithSlash(data.spellbook.class)}
 		</h3>
 	</div>
 	<div class="flex flex-col flex-grow flex-1 gap-4 justify-start ">

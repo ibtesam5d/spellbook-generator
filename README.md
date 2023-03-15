@@ -14,7 +14,9 @@ current: allow users to add/remove spells to/from their spellbook
 - show spellbook details on hover
 - show spellbook description on hover
 - add place to create spellbook from spellbooks page
-- seperatre classes with a comma AND a space
+- error page for when a spell/spellbook doesn't exist
+- add "class restriction"
+- add functionality to toggle "class restriction"
 - add interaction to side navigation bar
 - add pagination to the spellbooks page
 - add spell damage to table view
@@ -34,6 +36,7 @@ current: allow users to add/remove spells to/from their spellbook
 - try new navbar (check figma)
 - build spell table!
 - add spellbook page (mimic spell page ?)
+- seperatre classes with a comma AND a space
 
 ### user stories
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import SpellbookCard from '$lib/components/SpellbookCard.svelte';
+	import { joinWithSpace } from '$lib/utils/utils';
 
 	export let data: PageData;
 </script>
@@ -11,7 +12,7 @@
 		{#each data.spellbooks as spellbook}
 			<SpellbookCard
 				header={spellbook.name}
-				subheader="{spellbook.characterName} - {spellbook.class}"
+				subheader="{spellbook.characterName} - {joinWithSpace(spellbook.class)}"
 				subtext={spellbook.description ?? ''}
 			/>
 		{/each}

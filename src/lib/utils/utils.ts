@@ -10,3 +10,11 @@ export const numericToOrdinal = (number: number) => {
 			return number + 'th';
 	}
 };
+
+export const joinWithSpace = (list: string[]) => {
+	return list.join(', ');
+};
+
+export const joinWithSlash = (list: string[]) => {
+	return list.join('/');
+};

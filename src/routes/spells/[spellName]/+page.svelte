@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { numericToOrdinal } from '$lib/utils/utils';
+	import { joinWithSpace, numericToOrdinal } from '$lib/utils/utils';
 
 	export let data: PageData;
 </script>
@@ -42,7 +42,7 @@
 			{/if}
 		</div>
 		<div class="mt-auto p-4 bg-slate-600/75 rounded-xl">
-			<h3 class="text-xl"><strong>Classes: </strong> {data.spell.list}</h3>
+			<h3 class="text-xl"><strong>Classes: </strong> {joinWithSpace(data.spell.list)}</h3>
 			<h3 class="text-xl"><strong>Source: </strong> {data.spell.source}</h3>
 		</div>
 	</div>
