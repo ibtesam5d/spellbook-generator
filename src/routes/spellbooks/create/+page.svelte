@@ -5,7 +5,7 @@
 	export let form: ActionData;
 </script>
 
-<section class="flex flex-col flex-auto p-8">
+<section class="flex flex-col flex-auto p-12">
 	<h1 class="text-6xl py-8 mb-8">Create a Spellbook</h1>
 	<form
 		method="POST"

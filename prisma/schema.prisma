@@ -18,19 +18,21 @@ model User {
 }
 
 model Spell {
-  id             Int         @id @default(autoincrement())
-  level          Int
-  name           String
-  list           String[]
-  components     String[]
-  description    String
-  duration       String
-  range          String
-  school         String
-  source         String
-  subdescription String?
-  time           String
-  spellbooks     Spellbook[]
+  id              Int         @id @default(autoincrement())
+  level           Int
+  name            String
+  list            String[]
+  components      String[]
+  description     String
+  descriptionList String[]
+  moreDescription String?
+  duration        String
+  range           String
+  school          String
+  source          String
+  subdescription  String?
+  time            String
+  spellbooks      Spellbook[]
 }
 
 model Spellbook {

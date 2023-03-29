@@ -7,7 +7,7 @@
 	console.log(data);
 </script>
 
-<section class="flex flex-col flex-auto p-8">
+<section class="flex flex-col flex-auto p-12">
 	<div class="flex flex-col gap-4">
 		<h1 class="text-6xl">
 			{data.spellbook.name}
@@ -25,6 +25,3 @@
 		<div class="flex-1 text-start bg-slate-600/75 rounded-xl" />
 	</div>
 </section>
-
-<style lang="scss">
-</style>
