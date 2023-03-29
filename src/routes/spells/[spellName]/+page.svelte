@@ -48,7 +48,7 @@
 				<p class="text-lg self-center">{data.spell.moreDescription}</p>
 			{/if}
 			{#if data.spell.subdescription}
-				<p class="text-md self-center">
+				<p class="text-lg self-center">
 					<strong>At Higher Levels: </strong>{data.spell.subdescription}
 				</p>
 			{/if}
