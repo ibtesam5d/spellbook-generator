@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="w-16 h-screen m-8 flex flex-col items-center gap-4">
 	<ul class="nav-bubble">
 		<a href="/"><i class="mi-lg mi-home" /></a>
 	</ul>
@@ -14,15 +14,8 @@
 </nav>
 
 <style lang="scss">
-	.nav {
-		position: fixed;
-		width: 4rem;
-		height: calc(100vh - 80px);
-		margin: 2.5rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
+	.h-screen {
+		height: calc(100vh - 4rem);
 	}
 
 	.nav-bubble {

@@ -8,6 +8,7 @@ this is a personal project to create an online dungeons and dragons spellbook ge
 
 current: allow users to add/remove spells to/from their spellbook
 
+- remove characters like ' from spellbook url name
 - allow users to edit their spellbook's details
 - allow users to add a custom image for their spellbook
 - allow users to assign a color to their spellbooks

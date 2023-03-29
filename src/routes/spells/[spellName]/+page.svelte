@@ -5,7 +5,7 @@
 	export let data: PageData;
 </script>
 
-<section class="flex flex-col flex-auto gap-8 max-w-prose">
+<section class="flex flex-col flex-auto p-8">
 	<div class="flex flex-col gap-4 p-4 rounded-xl">
 		<h1 class="text-6xl">
 			{data.spell.name}

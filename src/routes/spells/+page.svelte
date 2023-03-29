@@ -5,7 +5,7 @@
 	export let data: PageData;
 </script>
 
-<section class="flex flex-col flex-auto w-full">
+<section class="flex flex-col flex-auto p-8">
 	<h1 class="text-6xl py-8">Spells</h1>
 	<SpellTable data={data.spells} />
 </section>
