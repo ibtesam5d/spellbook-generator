@@ -1,74 +1,33 @@
 <script lang="ts">
+	import { Icon, ArrowSmallRight } from 'svelte-hero-icons';
+
 	export let header: string = '';
 	export let subheader: string = '';
 	export let subtext: string = '';
+
+	let href = header.replaceAll(' ', '-').toLowerCase();
 </script>
 
-<div class="card">
-	<img src="https://picsum.photos/224/160" alt="Header" />
-	<div class="card__headergroup">
-		<h5 class="card__primarylabel">{header}</h5>
-		<span class="card__subheader">{subheader}</span>
+<div class="w-64 h-96 p-4 flex flex-col items-start justify-self-center rounded-2xl bg-stone-800">
+	<img class="w-56 h-40 mb-2" src="https://picsum.photos/224/160" alt="Header" />
+	<div class="w-full mb-2 flex flex-col items-center rounded-2xl">
+		<h5 class="text-xl">{header}</h5>
+		<span>{subheader}</span>
 	</div>
-	<p class="card__subtext">{subtext}</p>
-	<button>
-		<a href="/spellbooks/{header.replaceAll(' ', '-').toLowerCase()}">Open Spellbook</a>
-		<i class="mi-sm mi-arrow-right" />
-	</button>
+	<p class="w-full line-clamp">{subtext}</p>
+	<div class="flex mt-auto justify-center items-center w-full">
+		<a href="/spellbooks/{href}">Open Spellbook</a>
+		<Icon src={ArrowSmallRight} mini size="32" />
+	</div>
 </div>
 
 <style lang="scss">
-	.card {
-		width: 16rem;
-		height: 24rem;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-self: center;
-		border-radius: 1rem;
-		padding: 1rem;
-
-		@apply bg-stone-800;
-
-		img {
-			width: 14rem;
-			height: 10rem;
-			margin-bottom: 0.5rem;
-		}
-
-		&__headergroup {
-			padding: 0 0.5rem;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			border-radius: 1rem;
-		}
-
-		&__primarylabel {
-			font-size: 1.25rem;
-		}
-
-		&__subtext {
-			margin: 0.5rem;
-			display: -webkit-box;
-			overflow: hidden;
-			text-align: initial;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 3;
-		}
-
-		button {
-			margin-top: auto;
-			width: fit-content;
-			padding: 0.25rem 1rem;
-			border-radius: 1rem;
-			align-self: center;
-
-			@apply bg-stone-800;
-
-			i {
-				padding-left: 0.5rem;
-			}
-		}
+	.line-clamp {
+		width: 100%;
+		display: -webkit-box;
+		overflow: hidden;
+		text-align: center;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
 	}
 </style>
