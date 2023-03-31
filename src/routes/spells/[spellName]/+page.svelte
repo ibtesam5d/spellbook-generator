@@ -20,7 +20,7 @@
 	</div>
 	<div class="flex flex-col flex-auto gap-10 px-12">
 		<div class="flex justify-start">
-			<div class="flex flex-col text-start p-4 bg-slate-600/75 rounded-xl mr-8">
+			<div class="flex flex-col text-start p-4 bg-stone-800 rounded-xl mr-8">
 				<h3 class="text-xl mb-2"><strong>Casting Time: </strong>{data.spell.time}</h3>
 				<h3 class="text-xl mb-2"><strong>Range: </strong>{data.spell.range}</h3>
 				<h3 class="text-xl mb-2">
@@ -29,13 +29,13 @@
 				<h3 class="text-xl"><strong>Duration: </strong>{data.spell.duration}</h3>
 			</div>
 
-			<div class="flex flex-col text-start p-4 bg-slate-600/75 rounded-xl">
+			<div class="flex flex-col text-start p-4 bg-stone-800 rounded-xl">
 				<h3 class="text-xl mb-2"><strong>Classes: </strong> {joinWithSpace(data.spell.list)}</h3>
 				<h3 class="text-xl"><strong>Source: </strong> {data.spell.source}</h3>
 			</div>
 			<div class="flex grow justify-center items-center min-w-[20vw]">+ Add to Spellbook</div>
 		</div>
-		<div class="flex flex-col p-4 gap-8 bg-slate-600/75 rounded-xl">
+		<div class="flex flex-col p-4 gap-8 bg-stone-800 rounded-xl">
 			<p class="text-lg self-center">{data.spell.description}</p>
 			{#if data.spell.descriptionList.length > 0}
 				<ul class="text-start ml-10 list-disc">

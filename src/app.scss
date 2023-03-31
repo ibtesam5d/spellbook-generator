@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex: 1 1 auto;
+	max-width: 100%;
+}
+
+body {
+	font-family: 'Merriweather', sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+.mi-sm {
+	font-size: 1rem;
+}
+
+.mi-lg {
+	font-size: 2rem;
+}

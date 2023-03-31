@@ -28,7 +28,7 @@
 		border-radius: 1rem;
 		padding: 1rem;
 
-		@apply bg-slate-600/75;
+		@apply bg-stone-800;
 
 		img {
 			width: 14rem;
@@ -64,7 +64,7 @@
 			border-radius: 1rem;
 			align-self: center;
 
-			@apply bg-slate-500;
+			@apply bg-stone-800;
 
 			i {
 				padding-left: 0.5rem;

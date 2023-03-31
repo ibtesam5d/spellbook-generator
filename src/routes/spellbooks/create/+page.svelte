@@ -25,7 +25,7 @@
 			<div class="flex flex-col gap-4">
 				<p class="flex flex-col items-start gap-2">
 					<label for="sname">Spellbook Name</label>
-					<input type="text" id="sname" name="name" class="rounded-lg bg-slate-500 py-1 px-2" />
+					<input type="text" id="sname" name="name" class="rounded-lg bg-stone-800 py-1 px-2" />
 				</p>
 				<p class="flex flex-col items-start gap-2">
 					<label for="cname">Character Name</label>
@@ -33,7 +33,7 @@
 						type="text"
 						id="cname"
 						name="characterName"
-						class="rounded-lg bg-slate-500 py-1 px-2"
+						class="rounded-lg bg-stone-800 py-1 px-2"
 					/>
 				</p>
 			</div>
@@ -43,7 +43,7 @@
 					<textarea
 						id="desc"
 						name="description"
-						class="resize-none flex-grow rounded-lg bg-slate-500 py-1 px-2"
+						class="resize-none flex-grow rounded-lg bg-stone-800 py-1 px-2"
 					/>
 				</p>
 			</div>
@@ -96,7 +96,7 @@
 		</fieldset>
 
 		<div class="mt-auto flex justify-center">
-			<button type="submit" class="flex py-2 px-4 gap-2 bg-slate-500 rounded-full">
+			<button type="submit" class="flex py-2 px-4 gap-2 bg-stone-800 rounded-full">
 				<i class="mi-md mi-add" />
 				<span>Create a Spellbook</span>
 			</button>

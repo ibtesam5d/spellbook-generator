@@ -41,7 +41,7 @@ export const actions = {
 			});
 		}
 
-		const createSpellbook = await prisma.spellbook.create({
+		await prisma.spellbook.create({
 			data: {
 				name: name,
 				characterName: characterName,

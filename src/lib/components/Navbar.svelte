@@ -25,7 +25,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 9999px;
-		@apply bg-slate-500;
+		@apply bg-yellow-600;
 
 		&:last-of-type {
 			margin-top: auto;

@@ -22,6 +22,6 @@
 	</div>
 	<div class="flex flex-col gap-4 text-start h-64">
 		<h2 class="text-3xl">Spell Slots</h2>
-		<div class="flex-1 text-start bg-slate-600/75 rounded-xl" />
+		<div class="flex-1 text-start bg-stone-800 rounded-xl" />
 	</div>
 </section>

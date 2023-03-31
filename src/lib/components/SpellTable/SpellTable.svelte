@@ -63,11 +63,11 @@
 </script>
 
 <table class="spell-table">
-	<thead>
+	<thead class="">
 		{#each $table.getHeaderGroups() as headerGroup}
-			<tr class="bg-slate-600/75">
+			<tr class="bg-stone-800">
 				{#each headerGroup.headers as header}
-					<th class="spell-table__cell">
+					<th class="spell-table__header-cell">
 						{#if !header.isPlaceholder}
 							<svelte:component
 								this={flexRender(header.column.columnDef.header, header.getContext())}
@@ -80,9 +80,9 @@
 	</thead>
 	<tbody>
 		{#each $table.getRowModel().rows as row}
-			<tr class="spell-table__row">
+			<tr>
 				{#each row.getVisibleCells() as cell}
-					<td class="spell-table__cell">
+					<td class="spell-table__body-cell">
 						<svelte:component this={flexRender(cell.column.columnDef.cell, cell.getContext())} />
 					</td>
 				{/each}
@@ -94,10 +94,21 @@
 <style lang="scss">
 	.spell-table {
 		width: 100%;
-		border-collapse: separate !important;
+		// border-collapse: separate !important;
 
-		&__cell {
+		&__header-cell,
+		&__body-cell {
 			padding: 0.5rem;
+		}
+
+		&__header-cell:first-of-type {
+			border-top-left-radius: 1rem;
+			border-bottom-left-radius: 1rem;
+		}
+
+		&__header-cell:last-of-type {
+			border-top-right-radius: 1rem;
+			border-bottom-right-radius: 1rem;
 		}
 	}
 </style>
