@@ -5,7 +5,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	const spellName = params.spellName?.replaceAll('-', ' ');
 	const spell = await prisma.spell.findFirst({
 		where: {
-			name: {
+			spell_name: {
 				equals: spellName,
 				mode: 'insensitive'
 			}

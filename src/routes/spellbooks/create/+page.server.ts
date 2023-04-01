@@ -43,9 +43,11 @@ export const actions = {
 
 		await prisma.spellbook.create({
 			data: {
-				name: name,
-				characterName: characterName,
-				description: description,
+				id: '',
+				user_id: '',
+				spellbook_name: name,
+				character_name: characterName,
+				spellbook_description: description,
 				class: characterClass
 			}
 		});
