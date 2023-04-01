@@ -1,8 +1,14 @@
 import prisma from '$lib/server/prisma';
-import { json } from '@sveltejs/kit';
+import type { RequestHandler } from '@sveltejs/kit';
 
-export async function GET() {
+export const GET: RequestHandler = async () => {
 	const spellbooks = await prisma.spellbook.findMany();
 
-	return json(spellbooks);
-}
+	if (spellbooks.length === 0) {
+		return new Response(JSON.stringify({ message: 'Could not find any spellbooks' }), {
+			status: 404
+		});
+	}
+
+	return new Response(JSON.stringify(spellbooks), { status: 200 });
+};

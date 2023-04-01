@@ -1,10 +1,8 @@
 import prisma from '$lib/server/prisma';
-import { json } from '@sveltejs/kit';
+import type { RequestHandler } from '@sveltejs/kit';
 
-import type { RequestHandler } from '../$types';
-
-export const GET: RequestHandler = async ({ url }) => {
-	const spellName = url.pathname.split('/').pop()?.replaceAll('-', ' ');
+export const GET: RequestHandler = async ({ params }) => {
+	const spellName = params.spellName?.replaceAll('-', ' ');
 	const spell = await prisma.spell.findFirst({
 		where: {
 			name: {
@@ -14,5 +12,11 @@ export const GET: RequestHandler = async ({ url }) => {
 		}
 	});
 
-	return json(spell);
+	if (!spell) {
+		return new Response(JSON.stringify({ message: `Spell '${spellName}' not found` }), {
+			status: 404
+		});
+	}
+
+	return new Response(JSON.stringify(spell), { status: 200 });
 };
