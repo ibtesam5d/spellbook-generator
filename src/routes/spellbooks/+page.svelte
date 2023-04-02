@@ -11,9 +11,9 @@
 	<div class="grid grid-cols-3 gap-8">
 		{#each data.spellbooks as spellbook}
 			<SpellbookCard
-				header={spellbook.name}
-				subheader="{spellbook.characterName} - {joinWithSpace(spellbook.class)}"
-				subtext={spellbook.description ?? ''}
+				header={spellbook.spellbook_name}
+				subheader="{spellbook.character_name} - {joinWithSpace(spellbook.class)}"
+				subtext={spellbook.spellbook_description ?? ''}
 			/>
 		{/each}
 	</div>

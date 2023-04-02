@@ -7,41 +7,42 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id         String      @id @unique
-  username   String      @unique
-  role       Role        @default(USER)
-  session    Session[]
-  Key        Key[]
-  spellbooks Spellbook[]
+model AuthUser {
+  id           String        @id @unique
+  username     String        @unique
+  role         Role          @default(USER)
+  auth_key     AuthKey[]
+  auth_session AuthSession[]
+  spellbooks   Spellbook[]
 
   @@map("user")
 }
 
-model Session {
-  id             String @id @unique
+model AuthSession {
+  id             String   @id @unique
   user_id        String
   active_expires BigInt
   idle_expires   BigInt
-  user           User   @relation(references: [id], fields: [user_id], onDelete: Cascade)
+  auth_user      AuthUser @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@index([user_id])
   @@map("session")
 }
 
-model Key {
-  id              String  @id @unique
+model AuthKey {
+  id              String   @id @unique
   hashed_password String?
   user_id         String
-  primary         Boolean
-  user            User    @relation(references: [id], fields: [user_id], onDelete: Cascade)
+  primary_key     Boolean
+  expires         BigInt?
+  auth_user       AuthUser @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@index([user_id])
   @@map("key")
 }
 
 model Spell {
-  id                Int         @id @unique @default(autoincrement())
+  id                Int         @id @default(autoincrement())
   level             Int
   spell_name        String      @unique
   list              String[]
@@ -61,7 +62,7 @@ model Spell {
 }
 
 model Spellbook {
-  id                    String   @id @unique
+  id                    Int      @id @default(autoincrement())
   user_id               String
   spellbook_name        String   @unique
   character_name        String
@@ -69,7 +70,7 @@ model Spellbook {
   class                 String[]
   created_at            DateTime @default(now())
   updated_at            DateTime @updatedAt
-  user                  User     @relation(references: [id], fields: [user_id])
+  auth_user             AuthUser @relation(fields: [user_id], references: [id])
   spells                Spell[]
 
   @@index([user_id])

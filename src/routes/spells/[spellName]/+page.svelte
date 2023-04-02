@@ -10,7 +10,7 @@
 >
 	<div class="flex flex-col gap-4 p-4 rounded-xl mb-6">
 		<h1 class="text-6xl">
-			{data.spell.name}
+			{data.spell.spell_name}
 		</h1>
 		<h3 class="text-xl">
 			{#if data.spell.level === 0}
@@ -38,16 +38,16 @@
 			<div class="flex grow justify-center items-center min-w-[20vw]">+ Add to Spellbook</div>
 		</div>
 		<div class="flex flex-col p-4 gap-8 bg-stone-800 rounded-xl">
-			<p class="text-lg self-center">{data.spell.description}</p>
-			{#if data.spell.descriptionList.length > 0}
+			<p class="text-lg self-center">{data.spell.spell_description}</p>
+			{#if data.spell.description_list.length > 0}
 				<ul class="text-start ml-10 list-disc">
-					{#each data.spell.descriptionList as item}
+					{#each data.spell.description_list as item}
 						<li class="text-lg leading-loose">{item}</li>
 					{/each}
 				</ul>
 			{/if}
-			{#if data.spell.moreDescription}
-				<p class="text-lg self-center">{data.spell.moreDescription}</p>
+			{#if data.spell.description_more}
+				<p class="text-lg self-center">{data.spell.description_more}</p>
 			{/if}
 			{#if data.spell.subdescription}
 				<p class="text-lg self-center">

@@ -1,6 +1,6 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import prisma from '$lib/server/prisma';
+import { prisma } from '$lib/server/prisma';
 
 export const actions = {
 	create: async ({ request }) => {
@@ -43,7 +43,6 @@ export const actions = {
 
 		await prisma.spellbook.create({
 			data: {
-				id: '',
 				user_id: '',
 				spellbook_name: name,
 				character_name: characterName,

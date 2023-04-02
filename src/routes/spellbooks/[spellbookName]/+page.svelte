@@ -10,10 +10,10 @@
 <section class="flex flex-col flex-auto p-12">
 	<div class="flex flex-col gap-4">
 		<h1 class="text-6xl">
-			{data.spellbook.name}
+			{data.spellbook.spellbook_name}
 		</h1>
 		<h3 class="text-xl">
-			{data.spellbook.characterName} the {joinWithSlash(data.spellbook.class)}
+			{data.spellbook.character_name} the {joinWithSlash(data.spellbook.class)}
 		</h3>
 	</div>
 	<div class="flex flex-col flex-grow flex-1 gap-4 justify-start ">
