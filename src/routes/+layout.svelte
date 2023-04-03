@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import type { PageData } from './$types';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import '../app.scss';
 
 	$: noNav = $page.url.pathname === '/register' || $page.url.pathname === '/login';
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -11,6 +13,6 @@
 </svelte:head>
 
 {#if !noNav}
-	<Navbar />
+	<Navbar {data} />
 {/if}
 <slot />

@@ -1,4 +1,3 @@
-import { Prisma } from '@prisma/client';
 import { fail, redirect } from '@sveltejs/kit';
 import { LuciaError } from 'lucia-auth';
 import { auth } from '$lib/server/lucia';

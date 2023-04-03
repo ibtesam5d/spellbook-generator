@@ -2,7 +2,7 @@ import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { prisma } from '$lib/server/prisma';
 
-export const actions = {
+export const actions: Actions = {
 	create: async ({ request }) => {
 		const data = await request.formData();
 
