@@ -15,7 +15,7 @@
 
 	const defaultColumns: ColumnDef<Spell>[] = [
 		{
-			accessorKey: 'name',
+			accessorKey: 'spell_name',
 			header: () => 'Name',
 			cell: (data) =>
 				renderComponent(SpellTableLink, {
@@ -51,13 +51,6 @@
 		columns: defaultColumns,
 		getCoreRowModel: getCoreRowModel()
 	});
-
-	const rerender = () => {
-		options.update((options) => ({
-			...options,
-			data: data
-		}));
-	};
 
 	const table = createSvelteTable(options);
 </script>
