@@ -1,8 +1,14 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import prisma from '$lib/server/prisma';
+import { prisma } from '$lib/server/prisma';
+import type { PageServerLoad } from './$types';
 
-export const actions = {
+export const load: PageServerLoad = async ({ locals }) => {
+	const session = await locals.auth.validate();
+	if (!session) throw redirect(302, '/login');
+};
+
+export const actions: Actions = {
 	create: async ({ request }) => {
 		const data = await request.formData();
 
@@ -43,9 +49,10 @@ export const actions = {
 
 		await prisma.spellbook.create({
 			data: {
-				name: name,
-				characterName: characterName,
-				description: description,
+				user_id: '',
+				spellbook_name: name,
+				character_name: characterName,
+				spellbook_description: description,
 				class: characterClass
 			}
 		});

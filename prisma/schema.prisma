@@ -7,44 +7,74 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id         Int         @id @default(autoincrement())
-  email      String      @unique
-  username   String      @unique
-  password   String
-  role       Role        @default(USER)
-  spellbooks Spellbook[]
+model AuthUser {
+  id           String        @id @unique
+  username     String        @unique
+  role         Role          @default(USER)
+  auth_key     AuthKey[]
+  auth_session AuthSession[]
+  spellbooks   Spellbook[]
+
+  @@map("user")
+}
+
+model AuthSession {
+  id             String   @id @unique
+  user_id        String
+  active_expires BigInt
+  idle_expires   BigInt
+  auth_user      AuthUser @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("session")
+}
+
+model AuthKey {
+  id              String   @id @unique
+  hashed_password String?
+  user_id         String
+  primary_key     Boolean
+  expires         BigInt?
+  auth_user       AuthUser @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("key")
 }
 
 model Spell {
-  id              Int         @id @default(autoincrement())
-  level           Int
-  name            String
-  list            String[]
-  components      String[]
-  description     String
-  descriptionList String[]
-  moreDescription String?
-  duration        String
-  range           String
-  school          String
-  source          String
-  subdescription  String?
-  time            String
-  spellbooks      Spellbook[]
+  id                Int         @id @default(autoincrement())
+  level             Int
+  spell_name        String      @unique
+  list              String[]
+  components        String[]
+  spell_description String
+  description_list  String[]
+  description_more  String?
+  duration          String
+  range             String
+  school            String
+  source            String
+  subdescription    String?
+  time              String
+  spellbooks        Spellbook[]
+
+  @@map("spell")
 }
 
 model Spellbook {
-  id            Int      @id @default(autoincrement())
-  userId        Int?
-  name          String   @unique
-  characterName String
-  description   String?
-  class         String[]
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  User          User?    @relation(fields: [userId], references: [id])
-  spells        Spell[]
+  id                    Int      @id @default(autoincrement())
+  user_id               String
+  spellbook_name        String   @unique
+  character_name        String
+  spellbook_description String?
+  class                 String[]
+  created_at            DateTime @default(now())
+  updated_at            DateTime @updatedAt
+  auth_user             AuthUser @relation(fields: [user_id], references: [id])
+  spells                Spell[]
+
+  @@index([user_id])
+  @@map("spellbook")
 }
 
 enum Role {
