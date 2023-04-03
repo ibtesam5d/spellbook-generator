@@ -32,7 +32,7 @@
 			</div>
 
 			<div class="flex flex-col text-start p-4 bg-stone-800 rounded-xl">
-				<h3 class="text-xl mb-2"><strong>Classes: </strong> {joinWithSpace(data.spell.list)}</h3>
+				<h3 class="text-xl mb-2"><strong>Class(es): </strong> {joinWithSpace(data.spell.list)}</h3>
 				<h3 class="text-xl"><strong>Source: </strong> {data.spell.source}</h3>
 			</div>
 			<div class="flex grow justify-center items-center min-w-[20vw]">+ Add to Spellbook</div>
@@ -47,7 +47,9 @@
 				</ul>
 			{/if}
 			{#if data.spell.description_more}
-				<p class="text-lg self-center">{data.spell.description_more}</p>
+				{#each data.spell.description_more.split('\\n') as line}
+					<p class="text-lg self-center">{line}</p>
+				{/each}
 			{/if}
 			{#if data.spell.subdescription}
 				<p class="text-lg self-center">
