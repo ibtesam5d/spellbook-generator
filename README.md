@@ -9,7 +9,7 @@ this is a personal project to create an online dungeons and dragons spellbook ge
 
 ## potential tech stack
 
-- authentication: sveltekitauth.js (?)
+- authentication: lucia
 - orm: prisma
 - database: postgres (to find hosting options (fly.io?))
 - hosting: vercel (to look into alternatives potentially)
